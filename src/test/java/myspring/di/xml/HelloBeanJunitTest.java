@@ -28,5 +28,13 @@ public class HelloBeanJunitTest {
 		
 		assertEquals("Hello 스프링", helloByType.sayHello());
 		
+		helloByType.print();
+		
+		Printer strPrinter = context.getBean("strPrinter", Printer.class);
+		
+		
+		
+		
+		
 	}
 }
