@@ -19,10 +19,19 @@ public class HelloBeanSpringTest {
 	@Resource(name = "stringPrinter")
 	IPrinter printer;
 	
+	@Autowired
+	HelloBeanCons helloCons;
+	
 	@Test
 	void helloBeanSetter() {
 		assertEquals("Hello 어노테이션", hello.sayHello());
 		hello.print();
 		assertEquals("Hello 어노테이션", printer.toString());
+	}
+	
+	
+	@Test
+	void helloBeanCons() {
+		
 	}
 }
