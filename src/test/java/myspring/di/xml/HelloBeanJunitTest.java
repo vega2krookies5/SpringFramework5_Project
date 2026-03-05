@@ -1,5 +1,6 @@
 package myspring.di.xml;
 
+//static import
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,5 +25,8 @@ public class HelloBeanJunitTest {
 		System.out.println(helloById == helloByType);
 		
 		assertSame(helloById, helloByType);
+		
+		assertEquals("Hello 스프링", helloByType.sayHello());
+		
 	}
 }
