@@ -18,7 +18,7 @@ public class HelloConfig {
 	@Autowired
 	Environment environment;
 	
-	@Bean
+	@Bean //<bean>
 	public Printer stringPrinter() {
 		return new StringPrinter();
 	}
