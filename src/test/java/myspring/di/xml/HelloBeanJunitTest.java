@@ -16,6 +16,7 @@ public class HelloBeanJunitTest {
 
 	@Test
 	void helloBean() {
-		
+		Hello helloById = (Hello)context.getBean("hello");
+		Hello helloByType = context.getBean("hello", Hello.class);
 	}
 }
