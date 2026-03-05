@@ -8,15 +8,21 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.annotation.Resource;
+
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = "classpath:hello-annot.xml")
 public class HelloBeanSpringTest {
 	@Autowired
 	HelloBean hello;
 	
+	@Resource(name = "stringPrinter")
+	IPrinter printer;
+	
 	@Test
 	void helloBeanSetter() {
 		assertEquals("Hello 어노테이션", hello.sayHello());
-		
+		hello.print();
+		assertEquals("Hello 어노테이션", printer.toString());
 	}
 }
