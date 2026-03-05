@@ -32,6 +32,7 @@ public class HelloBeanSpringTest {
 	
 	@Test
 	void helloBeanCons() {
-		
+		assertEquals("Hello 생성자어노테이션", helloCons.sayHello());
+		helloCons.print();
 	}
 }
