@@ -12,7 +12,7 @@ public class HelloBeanJunitTest {
 	
 	@BeforeEach
 	void init() {
-		//Container 객체생성
+		//SpringBean Container 객체생성
 		context = new GenericXmlApplicationContext("classpath:hello-bean.xml");		
 	}
 
@@ -33,7 +33,6 @@ public class HelloBeanJunitTest {
 		Printer strPrinter = context.getBean("strPrinter", Printer.class);
 		
 		assertEquals("Hello 스프링", strPrinter.toString());
-		
 		
 	}
 }
