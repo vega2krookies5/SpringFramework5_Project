@@ -20,7 +20,7 @@ public class HelloBeanConfigTest {
 	
 	@Test
 	void hello() {
-		
+		assertEquals("Hello 어노테이션", hello.sayHello());
 	}
 	
 }
