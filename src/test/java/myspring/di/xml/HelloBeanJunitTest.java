@@ -22,6 +22,7 @@ public class HelloBeanJunitTest {
 	void helloBeanCons() {
 		Hello hello = context.getBean("helloC", Hello.class);
 		assertEquals("Hello 생성자", hello.sayHello());
+		hello.print();
 	}
 	
 	//Setter Injection을 테스트 하는 메서드
