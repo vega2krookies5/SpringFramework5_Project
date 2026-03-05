@@ -32,8 +32,7 @@ public class HelloBeanJunitTest {
 		
 		Printer strPrinter = context.getBean("strPrinter", Printer.class);
 		
-		
-		
+		assertEquals("Hello 스프링", strPrinter.toString());
 		
 		
 	}
